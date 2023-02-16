@@ -4,3 +4,11 @@ input {
     padding: 12px 20px;
     margin: 8px 0;
 }
+
+.Watchlist-Btn {
+    background-color: gold;
+    font-size: large;
+    width: 200px;
+    padding: 10px;
+    margin-top: 40px;
+}

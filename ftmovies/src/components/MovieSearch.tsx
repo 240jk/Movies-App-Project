@@ -28,7 +28,7 @@ export function MovieSearch() {
           src={`https://image.tmdb.org/t/p/w500/${searchResult.poster_path}`}
         ></img>
       </div>
-      <button>Submit</button>
+      <button className="Watchlist-Btn">Add to Watchlist</button>
       <br></br>
       <br></br>
     </form>
