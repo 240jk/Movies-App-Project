@@ -11,9 +11,11 @@ interface IBasicItemProps {
     return (
       <div>
         <h2>{props.movie.Genre}</h2>
+        <button>Add To Favorites</button>
         <ul>
             <li>{props.movie.ReleaseDate}</li>
         </ul>
+        
         <Link to={"/details"}>
           Details
         </Link>
