@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Result, TopLevel } from "../model/MovieLookup";
+import { Result, TopLevel } from "../models/MovieLookup";
 
 const apiKey = "150f3884042cdae54324059aa7a59a66";
 

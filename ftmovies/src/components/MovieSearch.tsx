@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-expressions */
 import { useEffect, useState } from "react";
-import { Result } from "../model/MovieLookup";
+import { Result } from "../models/MovieLookup";
 import { GetMovieData } from "../services/GetMovieData";
 import '../css/MovieSearch.css'
 
