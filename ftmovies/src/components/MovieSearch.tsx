@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Result } from "../model/MovieLookup";
 import { GetMovieData } from "../services/GetMovieData";
+import '../css/MovieSearch.css'
 
 export function MovieSearch() {
   const [movieSearch, setMovieSearch] = useState<string>("");
@@ -27,7 +28,7 @@ export function MovieSearch() {
           src={`https://image.tmdb.org/t/p/w500/${searchResult.poster_path}`}
         ></img>
       </div>
-      <button>Submit</button>
+      <button className="Watchlist-Btn">Add to Watchlist</button>
       <br></br>
       <br></br>
     </form>
@@ -38,6 +39,7 @@ export function MovieSearch() {
       <input
         type="text"
         name="name"
+        placeholder="Search movie here"
         onChange={(e) => setMovieSearch(e.target.value)}
         value={movieSearch}
       />
