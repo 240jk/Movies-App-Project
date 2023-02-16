@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import '/Users/williams/Grand_Circus/projects/Movies-App-Project/src/css/Main.css';
+import '/Users/williams/Grand_Circus/projects/Movies-App-Project/ftmovies/src/css/Main.css';
 function NavScrollExample() {
   return (
     <Navbar bg="light" expand="lg">
