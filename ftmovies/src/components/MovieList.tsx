@@ -9,7 +9,7 @@ export function MovieList() {
 
   const onSubmit = (e: FormEvent): void => {
     e.preventDefault();
-    setMovieList;
+    setMovieList(movieList);
   };
 
   return (
