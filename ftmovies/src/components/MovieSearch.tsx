@@ -1,12 +1,24 @@
 /* eslint-disable no-unused-expressions */
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Result } from "../models/MovieLookup";
 import { GetMovieData } from "../services/GetMovieData";
 import '../css/MovieSearch.css'
+import { Favorites } from "./Favorites";
+import OrderContext from "../context/ResultContext";
+import ResultContext from "../context/ResultContext";
 
-export function MovieSearch() {
+export interface IMovieSearchProps{
+  result:Result;
+  
+}
+
+export function MovieSearch(props:IMovieSearchProps) {
   const [movieSearch, setMovieSearch] = useState<string>("");
   const [searchResults, setSearchResults] = useState<Result[]>([]);
+
+  let {result} = props;
+  const { addResult, removeResult } = useContext(ResultContext);
+
 
   useEffect(() => {
     GetMovieData(movieSearch).then((data) =>
@@ -27,8 +39,10 @@ export function MovieSearch() {
         <img
           src={`https://image.tmdb.org/t/p/w500/${searchResult.poster_path}`}
         ></img>
+        <button>h</button>
       </div>
-      <button className="Watchlist-Btn">Add to Watchlist</button>
+      
+
       <br></br>
       <br></br>
     </form>
@@ -42,8 +56,10 @@ export function MovieSearch() {
         placeholder="Search movie here"
         onChange={(e) => setMovieSearch(e.target.value)}
         value={movieSearch}
+        
       />
       {searchResultDisplay}
+      
     </div>
   );
 }
