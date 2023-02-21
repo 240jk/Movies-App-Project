@@ -14,15 +14,15 @@ import HomeListRoute from "./routing/HomeListRoute";
 import FavoritesListRoute from "./routing/FavoritesListRoute";
 import Navbar from "./components/NavBar";
 
-
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Navbar/>
-      <ResultContextProvider>
-
-      </ResultContextProvider>
+        <ResultContextProvider>
+          <Navbar />
+          <Header />
+          <MovieList />
+        </ResultContextProvider>
       </BrowserRouter>
     </div>
   );
