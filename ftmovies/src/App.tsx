@@ -1,8 +1,11 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { MovieSearch } from "./components/MovieSearch";
 import { Header } from "./components/Header";
+import { MovieList } from "./components/MovieList";
+import { SearchForm } from "./components/SearchForm";
+import { Result } from "./models/MovieLookup";
+import { MovieCard } from "./components/MovieCard";
 import ResultContextProvider from "../src/context/ResultContextProvider";
 import { Favorites } from "./components/Favorites";
 import ResultContext from "../src/context/ResultContext";
@@ -18,20 +21,7 @@ function App() {
       <BrowserRouter>
       <Navbar/>
       <ResultContextProvider>
-      <Header />
-      <Favorites/>
-      <MovieSearch  />
-      <Routes>
-      <Route path="/Home" element={<HomeListRoute />} />
-      <Route path="/Favorites" element={<FavoritesListRoute />} />
-        {/* <Route path="/Favorites" element = {<FavoritesListRoute/>}>
 
-          </Route>
-
-          <Route path="/Details">
-          
-          </Route> */}
-      </Routes>
       </ResultContextProvider>
       </BrowserRouter>
     </div>
