@@ -14,18 +14,19 @@ export function MovieList() {
     setMovieLists(movieLists);
   };
   //callback function
-  function UpdateMovies(movielist: Result) {
-    setMovieLists([movielist]);
+  function UpdateMovies(movielist: Result[]) {
+    console.log(movielist);
+    setMovieLists([...movielist]);
   }
   //callback function also added line 24
 
   return (
     <div className="MovieList" onSubmit={(e) => onSubmit(e)}>
-      <SearchForm UpdateMovies={setMovieLists} />
+      <SearchForm UpdateMovies={UpdateMovies} />
 
       <ul>
         {movieLists.map((movie) => (
-          <MovieCard searchResult={movie} />
+          <MovieCard key={movie.id} searchResult={movie} />
         ))}
       </ul>
     </div>

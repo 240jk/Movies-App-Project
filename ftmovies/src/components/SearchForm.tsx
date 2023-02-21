@@ -7,19 +7,19 @@ interface ISearchFormProps {
   UpdateMovies: Function;
 }
 export function SearchForm(props: ISearchFormProps) {
-  const [searchResults, setSearchResults] = useState<Result[]>([]);
   const [movieLists, setMovieLists] = useState<string>("");
 
   const onSubmit = (e: any) => {
-    props.UpdateMovies({ movieLists: movieLists });
+    // props.UpdateMovies({ movieLists: movieLists });
     e.preventDefault();
     const data = new FormData(e.target);
     const result = data.get("searchBarInput")?.toString() || "";
+    console.log(movieLists);
     GetMovieData(movieLists).then((response) =>
-      setSearchResults(response.data.results)
+      props.UpdateMovies(response.data.results)
     );
 
-    setMovieLists(result);
+    // setMovieLists(result);
   };
 
   //   let searchResultDisplay = searchResults?.map((searchResult: Result) => (
@@ -46,10 +46,9 @@ export function SearchForm(props: ISearchFormProps) {
           name="searchBarInput"
           placeholder="Search movie here"
           id="searchBarInput"
+          onChange={(e) => setMovieLists(e.target.value)}
         />
-        <button onSubmit={(e) => onSubmit} type="submit">
-          Submit
-        </button>
+        <button type="submit">Submit</button>
       </form>
       {/* {searchResultDisplay} */}
     </div>
