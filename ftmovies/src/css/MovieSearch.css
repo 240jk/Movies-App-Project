@@ -1,14 +1,18 @@
 input {
-    width: 18%;
-    font-size: large;
-    padding: 12px 20px;
-    margin: 8px 0;
+  width: 18%;
+  font-size: large;
+  padding: 12px 20px;
+  margin: 8px 0;
 }
 
 .Watchlist-Btn {
-    background-color: gold;
-    font-size: large;
-    width: 200px;
-    padding: 10px;
-    margin-top: 40px;
+  background-color: gold;
+  font-size: large;
+  width: 200px;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+div {
+  color: white;
 }
