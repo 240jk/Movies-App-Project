@@ -22,9 +22,10 @@ export function MovieList() {
   return (
     <div className="MovieList" onSubmit={(e) => onSubmit(e)}>
       <SearchForm UpdateMovies={setMovieLists} />
+
       <ul>
         {movieLists.map((movie) => (
-          <MovieCard MovieResult={movie} />
+          <MovieCard searchResult={movie} />
         ))}
       </ul>
     </div>

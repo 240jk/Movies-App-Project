@@ -10,17 +10,14 @@ export function SearchForm(props: ISearchFormProps) {
   const [searchResults, setSearchResults] = useState<Result[]>([]);
   const [movieLists, setMovieLists] = useState<string>("");
 
-  useEffect(() => {
-    GetMovieData(movieLists).then((response) =>
-      setSearchResults(response.data.results)
-    );
-  }, [movieLists]);
-
   const onSubmit = (e: any) => {
     props.UpdateMovies({ movieLists: movieLists });
     e.preventDefault();
     const data = new FormData(e.target);
     const result = data.get("searchBarInput")?.toString() || "";
+    GetMovieData(movieLists).then((response) =>
+      setSearchResults(response.data.results)
+    );
 
     setMovieLists(result);
   };
