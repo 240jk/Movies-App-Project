@@ -6,16 +6,16 @@ import { Header } from "./components/Header";
 import ResultContextProvider from "../src/context/ResultContextProvider";
 import { Favorites } from "./components/Favorites";
 import ResultContext from "../src/context/ResultContext";
+import { Filters } from "./components/Filters";
 
 function App() {
   return (
     <div className="App">
       <ResultContextProvider>
-      <Header />
-      <Favorites/>
-      <MovieSearch  />
-      
- 
+        <Header />
+        <Filters />
+        <Favorites />
+        <MovieSearch />
       </ResultContextProvider>
     </div>
   );
