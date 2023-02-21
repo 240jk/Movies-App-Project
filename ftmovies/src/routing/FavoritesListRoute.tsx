@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function FavoritesListRoute() {
     return (
       <div>
-        <h1 ><Link to="/Favorites">Favorites</Link></h1>
+        <h1 >Favorites</h1>
       </div>
     );
   }

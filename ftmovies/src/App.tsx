@@ -9,18 +9,21 @@ import ResultContext from "../src/context/ResultContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeListRoute from "./routing/HomeListRoute";
 import FavoritesListRoute from "./routing/FavoritesListRoute";
+import Navbar from "./components/NavBar";
 
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <Navbar/>
       <ResultContextProvider>
       <Header />
       <Favorites/>
       <MovieSearch  />
       <Routes>
       <Route path="/Home" element={<HomeListRoute />} />
+      <Route path="/Favorites" element={<FavoritesListRoute />} />
         {/* <Route path="/Favorites" element = {<FavoritesListRoute/>}>
 
           </Route>
