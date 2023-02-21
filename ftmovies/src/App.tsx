@@ -6,13 +6,19 @@ import { MovieList } from "./components/MovieList";
 import { SearchForm } from "./components/SearchForm";
 import { Result } from "./models/MovieLookup";
 import { MovieCard } from "./components/MovieCard";
+import ResultContextProvider from "../src/context/ResultContextProvider";
+import { Favorites } from "./components/Favorites";
+import ResultContext from "../src/context/ResultContext";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      {/* Favorites */}
-      <MovieList />
+      <ResultContextProvider>
+        <Header />
+        {/* Favorites */}
+        <MovieList />
+        <Favorites />
+      </ResultContextProvider>
     </div>
   );
 }
