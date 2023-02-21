@@ -9,15 +9,21 @@ import { MovieCard } from "./components/MovieCard";
 import ResultContextProvider from "../src/context/ResultContextProvider";
 import { Favorites } from "./components/Favorites";
 import ResultContext from "../src/context/ResultContext";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomeListRoute from "./routing/HomeListRoute";
+import FavoritesListRoute from "./routing/FavoritesListRoute";
+import Navbar from "./components/NavBar";
+
 
 function App() {
   return (
     <div className="App">
+      <BrowserRouter>
+      <Navbar/>
       <ResultContextProvider>
-        <Header />
-        <MovieList />
-        <Favorites />
+
       </ResultContextProvider>
+      </BrowserRouter>
     </div>
   );
 }
