@@ -26,7 +26,7 @@ export function MovieList() {
 
       <ul>
         {movieLists.map((movie) => (
-          <MovieCard key={movie.id} searchResult={movie} />
+          <MovieCard key={movie.id} MovieResult={movie} />
         ))}
       </ul>
     </div>
