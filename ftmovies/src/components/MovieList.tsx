@@ -2,6 +2,7 @@ import * as React from "react";
 import { useState, FormEvent } from "react";
 
 import { Result } from "../models/MovieLookup";
+import { Details } from "./Details";
 import { MovieCard } from "./MovieCard";
 import { SearchForm } from "./SearchForm";
 
