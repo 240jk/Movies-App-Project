@@ -18,13 +18,10 @@ function NavScrollExample(){
             navbarScroll
           >
             <div id='home'>
-            <Nav.Link id='home' href="/home">Home</Nav.Link>
+              <Nav.Link id='home' href="/home">Home</Nav.Link>
             </div>
-            <Nav.Link href="/favorites">Favorites</Nav.Link>
-           
-
+              <Nav.Link href="/favorites">Favorites</Nav.Link>
           </Nav>
-          
         </Navbar.Collapse>
       </Container>
     </Navbar>
