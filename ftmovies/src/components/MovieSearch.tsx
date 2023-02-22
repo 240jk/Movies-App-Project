@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Result } from "../models/MovieLookup";
 import { GetMovieData } from "../services/GetMovieData";
-import '../css/MovieSearch.css'
+
 import { Favorites } from "./Favorites";
 
 export function MovieSearch() {
@@ -29,7 +29,7 @@ export function MovieSearch() {
           src={`https://image.tmdb.org/t/p/w500/${searchResult.poster_path}`}
         ></img>
       </div>
-      
+
       <br></br>
       <br></br>
     </form>
