@@ -6,9 +6,9 @@ import { MovieList } from "./components/MovieList";
 import { SearchForm } from "./components/SearchForm";
 import { Result } from "./models/MovieLookup";
 import { MovieCard } from "./components/MovieCard";
-import ResultContextProvider from "../src/context/ResultContextProvider";
+import ResultContextProvider from "./context/OrderContextProvider";
 import { Favorites } from "./components/Favorites";
-import ResultContext from "../src/context/ResultContext";
+import ResultContext from "./context/OrderContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeListRoute from "./routing/HomeListRoute";
 import FavoritesListRoute from "./routing/FavoritesListRoute";
@@ -43,7 +43,7 @@ function App() {
       
         <MovieList />
         
-
+       
       </ResultContextProvider>
 {/* 
         <ResultContextProvider>

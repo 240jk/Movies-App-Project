@@ -1,14 +1,15 @@
 import { ReactNode, useState } from "react";
 import {Result} from "../models/MovieLookup";
+import OrderContext from "./OrderContext";
 
 
-import ResultContext from "./ResultContext";
+import ResultContext from "./OrderContext";
 
-interface IResultContextProviderProps{
+interface IOrderContextProviderProps{
     children: ReactNode
 }
 
-const ResultContextProvider = ({children}:IResultContextProviderProps) =>{
+const ResultContextProvider = ({children}:IOrderContextProviderProps) =>{
     const [order, setOrder] = useState<Result[]>([]);
 
     const addResult = (result:Result) => {
@@ -19,10 +20,10 @@ const ResultContextProvider = ({children}:IResultContextProviderProps) =>{
     const removeResult = (id:number) => {
         setOrder(order.filter((x) => x.id !== id));
     }
-    return(<ResultContext.Provider value={{ 
+    return(<OrderContext.Provider value={{ 
         order: order, 
         addResult: addResult,
         removeResult: removeResult
-    }}>{children}</ResultContext.Provider>);
+    }}>{children}</OrderContext.Provider>);
 }
 export default ResultContextProvider;

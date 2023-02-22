@@ -1,5 +1,6 @@
 import { useContext, useState } from "react"
-import ResultContext from "../context/ResultContext";
+import OrderContext from "../context/OrderContext";
+import ResultContext from "../context/OrderContext";
 // import OrderContext from "../context/ResultContext";
 
 
@@ -21,12 +22,12 @@ import ResultContext from "../context/ResultContext";
 
 
 export function Favorites(){
-    const{order} = useContext(ResultContext);
+    const{order} = useContext(OrderContext);
     return (
-        <div>
+        <div className= "Favorites">
             <ol>
-                {order.map((result) => <li key = {result.id}></li>)}
-                <Favorites />
+               
+                hq
             </ol>
            
         </div>

@@ -1,7 +1,7 @@
 import { Result } from "../models/MovieLookup";
 import "../css/MovieCard.css";
 import { useContext, useState } from "react";
-import ResultContext from "../context/ResultContext";
+import ResultContext from "../context/OrderContext";
 
 
 //Functionality for add delete button! Add to cards when ready
@@ -26,7 +26,7 @@ interface IMovieCardProps {
 }
 
 export function MovieCard(props: IMovieCardProps) {
-  let {MovieResult} = props;
+  const{MovieResult} = props;
   const { addResult, removeResult } = useContext(ResultContext);
 
   return (
