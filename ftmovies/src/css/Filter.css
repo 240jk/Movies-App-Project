@@ -11,3 +11,9 @@ select {
 input {
   margin-right: 15px;
 }
+
+.Filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
