@@ -13,14 +13,33 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeListRoute from "./routing/HomeListRoute";
 import FavoritesListRoute from "./routing/FavoritesListRoute";
 import Navbar from "./components/NavBar";
+import { MovieSearch } from "./components/MovieSearch";
 
 
 function App() {
   return (
-    <div className="App">
+<div className="App">
       <BrowserRouter>
       <Navbar/>
       <ResultContextProvider>
+
+      <Header />
+      
+      <MovieSearch  />
+      <Routes>
+      <Route path="/Home" element={<HomeListRoute />} />
+      <Route path="/Favorites" element={<FavoritesListRoute />} />
+        {/* <Route path="/Favorites" element = {<FavoritesListRoute/>}>
+
+          </Route>
+
+          <Route path="/Details">
+          
+          </Route> */}
+      </Routes>
+        <Header />
+        <MovieList />
+        
 
       </ResultContextProvider>
       </BrowserRouter>

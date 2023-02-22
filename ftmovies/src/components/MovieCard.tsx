@@ -1,6 +1,24 @@
 import { Result } from "../models/MovieLookup";
 import "../css/MovieCard.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import ResultContext from "../context/ResultContext";
+
+
+//Functionality for add delete button! Add to cards when ready
+
+// import { Favorites } from "./Favorites";
+// // import OrderContext from "../context/ResultContext";
+
+
+
+// export interface IMovieSearchProps{
+//   result:Result;
+  
+// }
+// props:IMovieSearchProps
+// let {result} = props;
+// const { addResult, removeResult } = useContext(ResultContext);
+
 
 
 interface IMovieCardProps {
@@ -8,6 +26,9 @@ interface IMovieCardProps {
 }
 
 export function MovieCard(props: IMovieCardProps) {
+  let {MovieResult} = props;
+  const { addResult, removeResult } = useContext(ResultContext);
+
   return (
   
     <div className="MovieCards">
@@ -20,7 +41,12 @@ export function MovieCard(props: IMovieCardProps) {
           <h2>{props.MovieResult.title}</h2>
           <div className="Vote-Average">{props.MovieResult.vote_average.toFixed(1)}</div>
           <div>{props.MovieResult.overview}</div>
+          <div><button onClick={() => addResult(MovieResult)}>Add</button></div>
+          
+          {/* <button onClick={() => removeResult(MovieResult)}>Remove</button> */}
+          
         </div>
+        
       </div>
     </div>
   );

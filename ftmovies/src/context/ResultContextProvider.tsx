@@ -1,7 +1,7 @@
 import { ReactNode, useState } from "react";
 import {Result} from "../models/MovieLookup";
-import { ResultContextModel } from "./ResultContextModel";
-import OrderContext from "./ResultContext";
+
+
 import ResultContext from "./ResultContext";
 
 interface IResultContextProviderProps{
