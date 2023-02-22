@@ -6,7 +6,7 @@ import { Header } from "./components/Header";
 import ResultContextProvider from "../src/context/ResultContextProvider";
 import { Favorites } from "./components/Favorites";
 import ResultContext from "../src/context/ResultContext";
-import { Filters } from "./components/Filters";
+import Filters from "./components/Filters";
 
 function App() {
   return (
