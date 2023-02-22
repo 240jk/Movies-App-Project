@@ -13,16 +13,45 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeListRoute from "./routing/HomeListRoute";
 import FavoritesListRoute from "./routing/FavoritesListRoute";
 import Navbar from "./components/NavBar";
+import { MovieSearch } from "./components/MovieSearch";
+import DetailsListRoute from "./routing/DetailsListRoute";
 
 function App() {
   return (
-    <div className="App">
+<div className="App">
       <BrowserRouter>
+
+     
+      <ResultContextProvider>
+      <Navbar/>
+
+      <Header />
+      
+      
+      <Routes>
+      <Route path="/Home" element={<HomeListRoute />} />
+      <Route path="/Favorites" element={<FavoritesListRoute />} />
+      <Route path="/Details" element={<DetailsListRoute />} />
+        {/* <Route path="/Favorites" element = {<FavoritesListRoute/>}>
+
+          </Route>
+
+          <Route path="/Details">
+          
+          </Route> */}
+      </Routes>
+      
+        <MovieList />
+        
+
+      </ResultContextProvider>
+{/* 
         <ResultContextProvider>
           <Navbar />
           <Header />
           <MovieList />
-        </ResultContextProvider>
+        </ResultContextProvider> */}
+
       </BrowserRouter>
     </div>
   );
