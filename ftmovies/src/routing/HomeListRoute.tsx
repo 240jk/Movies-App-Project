@@ -1,15 +1,12 @@
-import { useState } from 'react';
+import * as React from 'react';
+import { Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { MovieList } from '../components/MovieList';
-import { MovieCard } from '../components/MovieCard';
+import "../css/Header.css";
 
-function HomeListRoute (){
-    // const [movies] = useState<Movie[]>(movieList);
-    return (
-      <div>
-        
-      </div>
-    );
+export function HomeListRoute () {
+  return (
+    <div id='home' className='headerStyle'>
+    <Nav.Link className="homeLink" id='home' href="/home">Home</Nav.Link>
+  </div>
+  );
 }
-
-export default HomeListRoute

@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import * as React from 'react';
+import { Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-function FavoritesListRoute() {
-    return (
-      <div>
-        <h1 >Favorites</h1>
-      </div>
-    );
-  }
-  export default FavoritesListRoute
+export function FavoritesListRoute () {
+  return (
+    <div id='favorites'>
+    <Nav.Link id='favorites' href="/favorites">Favorites</Nav.Link>
+  </div>
+  );
+}
