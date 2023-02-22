@@ -26,7 +26,7 @@ export function Favorites(){
         <div>
             <ol>
                 {order.map((result) => <li key = {result.id}></li>)}
-               
+                <Favorites />
             </ol>
            
         </div>
