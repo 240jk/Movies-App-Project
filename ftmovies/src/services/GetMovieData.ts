@@ -11,7 +11,7 @@ export async function GetMovieData(movieSearch: any) {
       params: { query: movieSearch, api_key: apiKey },
     }
   );
-
+  console.log(result);
   return result;
 }
 

@@ -1,3 +1,3 @@
-export function details(){
+export function Details(){
     
 }
