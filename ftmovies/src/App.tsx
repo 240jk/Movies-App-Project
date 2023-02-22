@@ -10,35 +10,24 @@ import ResultContextProvider from "../src/context/ResultContextProvider";
 import { Favorites } from "./components/Favorites";
 import ResultContext from "../src/context/ResultContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomeListRoute from "./routing/HomeListRoute";
-import FavoritesListRoute from "./routing/FavoritesListRoute";
-import Navbar from "./components/NavBar";
+// import Navbar from "./components/NavBar";
 import DetailsListRoute from "./routing/DetailsListRoute";
+import { HomeListRoute } from "./routing/HomeListRoute";
+import { FavoritesListRoute } from "./routing/FavoritesListRoute";
 
 function App() {
   return (
-<div className="App">
+    <div className="App">
       <BrowserRouter>
         <ResultContextProvider>
-          <Navbar/>
-          <Header />      
+          <Header />
           <Routes>
             <Route path="/Home" element={<HomeListRoute />} />
             <Route path="/Favorites" element={<FavoritesListRoute />} />
             <Route path="/Details" element={<DetailsListRoute />} />
-            {/* <Route path="/Favorites" element = {<FavoritesListRoute/>}>
-            </Route>
-            <Route path="/Details">
-          </Route> */}
-          </Routes>      
+          </Routes>
           <MovieList />
         </ResultContextProvider>
-        {/* 
-        <ResultContextProvider>
-          <Navbar />
-          <Header />
-          <MovieList />
-        </ResultContextProvider> */}
       </BrowserRouter>
     </div>
   );

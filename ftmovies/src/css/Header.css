@@ -4,9 +4,16 @@ h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 60px;
     color: #FBC403;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 body {
     background-color: black;
 }
+
+#home {
+    font-size: 30px;
+    color: #FBC403;
+    margin-bottom: 50px;
+}
+
