@@ -2,7 +2,11 @@
 import { useEffect, useState } from "react";
 import { Result } from "../models/MovieLookup";
 import { GetMovieData } from "../services/GetMovieData";
+<<<<<<< HEAD
 
+=======
+import '../css/SearchForm.css'
+>>>>>>> main
 import { Favorites } from "./Favorites";
 
 export function MovieSearch() {
