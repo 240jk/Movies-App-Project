@@ -15,6 +15,7 @@ import FavoritesListRoute from "./routing/FavoritesListRoute";
 import Navbar from "./components/NavBar";
 import { MovieSearch } from "./components/MovieSearch";
 import DetailsListRoute from "./routing/DetailsListRoute";
+import Filters from "./components/Filters";
 
 function App() {
   return (
@@ -37,7 +38,7 @@ function App() {
           
           </Route> */}
           </Routes>
-
+          <Filters />
           <MovieList />
         </ResultContextProvider>
         {/* 

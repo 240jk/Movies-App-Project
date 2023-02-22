@@ -1,6 +1,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import Genres from "../models/Genres";
 import getGenres from "../services/GetMovieData";
+import "../css/Filter.css";
 
 export default function Filters() {
   const [genres, setGenres] = useState<Genres[]>([]);
@@ -26,7 +27,7 @@ export default function Filters() {
   return (
     <form className="Filters" onSubmit={(e) => {}}>
       <>
-        <label htmlFor="genre"></label>
+        <label className="genre" htmlFor="genre"></label>
         <select
           id="genre"
           value={genre}

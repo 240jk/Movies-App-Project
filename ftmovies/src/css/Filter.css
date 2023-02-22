@@ -1,0 +1,17 @@
+.genre,
+.year,
+.votes {
+  color: #fbc403;
+  display: flex;
+  justify-content: center;
+}
+
+.year {
+  position: relative;
+  right: 100px;
+}
+
+.votes {
+  position: relative;
+  right: 95px;
+}
