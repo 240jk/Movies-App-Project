@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Result } from "../models/MovieLookup";
 import { GetMovieData } from "../services/GetMovieData";
-import "../css/MovieSearch.css";
+import "../css/SearchForm.css";
 
 interface ISearchFormProps {
   UpdateMovies: Function;
@@ -21,7 +21,7 @@ export function SearchForm(props: ISearchFormProps) {
 
   return (
     <div className="SearchForm">
-      <form onSubmit={onSubmit}>
+      <form className="form" onSubmit={onSubmit}>
         <input
           type="text"
           name="searchBarInput"
