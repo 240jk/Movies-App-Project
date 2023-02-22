@@ -16,17 +16,18 @@ import Navbar from "./components/NavBar";
 import { MovieSearch } from "./components/MovieSearch";
 import DetailsListRoute from "./routing/DetailsListRoute";
 
-
 function App() {
   return (
 <div className="App">
       <BrowserRouter>
-      <Navbar/>
+
+     
       <ResultContextProvider>
+      <Navbar/>
 
       <Header />
       
-      <MovieSearch  />
+      
       <Routes>
       <Route path="/Home" element={<HomeListRoute />} />
       <Route path="/Favorites" element={<FavoritesListRoute />} />
@@ -39,11 +40,18 @@ function App() {
           
           </Route> */}
       </Routes>
-        <Header />
+      
         <MovieList />
         
 
       </ResultContextProvider>
+{/* 
+        <ResultContextProvider>
+          <Navbar />
+          <Header />
+          <MovieList />
+        </ResultContextProvider> */}
+
       </BrowserRouter>
     </div>
   );
