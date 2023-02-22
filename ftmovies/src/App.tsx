@@ -9,6 +9,7 @@ import { MovieCard } from "./components/MovieCard";
 import ResultContextProvider from "../src/context/ResultContextProvider";
 import { Favorites } from "./components/Favorites";
 import ResultContext from "../src/context/ResultContext";
+import { Details } from "./components/Details";
 
 function App() {
   return (
