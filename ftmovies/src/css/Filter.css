@@ -2,16 +2,12 @@
 .year,
 .votes {
   color: #fbc403;
-  display: flex;
-  justify-content: center;
 }
 
-.year {
-  position: relative;
-  right: 100px;
+select {
+  margin-right: 10px;
 }
 
-.votes {
-  position: relative;
-  right: 95px;
+input {
+  margin-right: 15px;
 }
