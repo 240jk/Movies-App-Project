@@ -2,6 +2,7 @@ import { Result } from "../models/MovieLookup";
 import "../css/MovieCard.css";
 import { useContext, useState } from "react";
 import ResultContext from "../context/OrderContext";
+import OrderContext from "../context/OrderContext";
 
 
 //Functionality for add delete button! Add to cards when ready
@@ -27,7 +28,7 @@ interface IMovieCardProps {
 
 export function MovieCard(props: IMovieCardProps) {
   const{MovieResult} = props;
-  const { addResult, removeResult } = useContext(ResultContext);
+  const { addResult, removeResult } = useContext(OrderContext);
 
   return (
   
@@ -42,6 +43,7 @@ export function MovieCard(props: IMovieCardProps) {
           <div className="Vote-Average">{props.MovieResult.vote_average.toFixed(1)}</div>
           <div>{props.MovieResult.overview}</div>
           <div><button onClick={() => addResult(MovieResult)}>Add</button></div>
+          <div><button onClick={() => removeResult(MovieResult.id)}>Remove</button></div>
           
           {/* <button onClick={() => removeResult(MovieResult)}>Remove</button> */}
           

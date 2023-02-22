@@ -1,6 +1,7 @@
 import { useContext, useState } from "react"
 import OrderContext from "../context/OrderContext";
 import ResultContext from "../context/OrderContext";
+import { MovieCard } from "./MovieCard";
 // import OrderContext from "../context/ResultContext";
 
 
@@ -23,11 +24,12 @@ import ResultContext from "../context/OrderContext";
 
 export function Favorites(){
     const{order} = useContext(OrderContext);
+
     return (
         <div className= "Favorites">
             <ol>
                
-                hq
+               {order.map((movie) =>  <MovieCard MovieResult={movie}/>)}
             </ol>
            
         </div>
