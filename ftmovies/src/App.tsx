@@ -14,6 +14,7 @@ import HomeListRoute from "./routing/HomeListRoute";
 import FavoritesListRoute from "./routing/FavoritesListRoute";
 import Navbar from "./components/NavBar";
 import { MovieSearch } from "./components/MovieSearch";
+import DetailsListRoute from "./routing/DetailsListRoute";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <Routes>
       <Route path="/Home" element={<HomeListRoute />} />
       <Route path="/Favorites" element={<FavoritesListRoute />} />
+      <Route path="/Details" element={<DetailsListRoute />} />
         {/* <Route path="/Favorites" element = {<FavoritesListRoute/>}>
 
           </Route>
