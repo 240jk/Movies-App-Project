@@ -13,6 +13,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/NavBar";
 import DetailsListRoute from "./routing/DetailsListRoute";
+import Filters from "./components/Filters";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <ResultContextProvider>
           <Navbar />
           <Header />
+          <Filters />
           <Routes>
             <Route path="/Details" element={<DetailsListRoute />} />
             {/* <Route path="/Favorites" element = {<FavoritesListRoute/>}>

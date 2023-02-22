@@ -2,13 +2,12 @@ import { FormEvent, useEffect, useState } from "react";
 import Genres from "../models/Genres";
 import getGenres from "../services/GetMovieData";
 import "../css/Filter.css";
-
+import { useNavigate } from "react-router-dom";
 import { SearchForm } from "./SearchForm";
 import { MovieList } from "./MovieList";
 import { Result } from "../models/MovieLookup";
 
 export default function Filters() {
-  const [movieLists, setMovieLists] = useState<Result[]>([]);
   const [genres, setGenres] = useState<Genres[]>([]);
   const [genre, setGenre] = useState("");
   const [year, setYear] = useState("");
@@ -18,13 +17,8 @@ export default function Filters() {
     getGenres().then((response) => setGenres(response.genres));
   }, []);
 
-  const onSubmit = (e: FormEvent): void => {
-    e.preventDefault();
-    setMovieLists(movieLists);
-  };
-
   return (
-    <form className="Filters" onSubmit={onSubmit}>
+    <form className="Filters">
       <>
         <label className="genre" htmlFor="genre"></label>
         <select
@@ -33,7 +27,7 @@ export default function Filters() {
           onChange={(e) => setGenre(e.target.value)}
         >
           <>
-            <option value={genre}>Genre</option>
+            <option value="">Genre</option>
             {genres.map((genre) => (
               <option key={genre.id} value={genre.id}>
                 {genre.name}
