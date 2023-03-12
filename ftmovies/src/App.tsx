@@ -23,9 +23,10 @@ function App() {
 
      
       <ResultContextProvider>
+      <Header />
       <Navbar/>
 
-      <Header />
+      
       
       
       <Routes>

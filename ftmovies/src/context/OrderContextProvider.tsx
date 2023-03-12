@@ -9,7 +9,7 @@ interface IOrderContextProviderProps{
     children: ReactNode
 }
 
-const ResultContextProvider = ({children}:IOrderContextProviderProps) =>{
+const OrderContextProvider = ({children}:IOrderContextProviderProps) =>{
     const [order, setOrder] = useState<Result[]>([]);
 
     const addResult = (result:Result) => {
@@ -26,4 +26,4 @@ const ResultContextProvider = ({children}:IOrderContextProviderProps) =>{
         removeResult: removeResult
     }}>{children}</OrderContext.Provider>);
 }
-export default ResultContextProvider;
+export default OrderContextProvider;

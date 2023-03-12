@@ -42,6 +42,7 @@ export function MovieCard(props: IMovieCardProps) {
           <h2>{props.MovieResult.title}</h2>
           <div className="Vote-Average">{props.MovieResult.vote_average.toFixed(1)}</div>
           <div>{props.MovieResult.overview}</div>
+         
           <div><button onClick={() => addResult(MovieResult)}>Add</button></div>
           <div><button onClick={() => removeResult(MovieResult.id)}>Remove</button></div>
           
